@@ -28,7 +28,7 @@ class LaravelRequestLogServiceProvider extends PackageServiceProvider
 			'driver'     => 'daily',
 			'path'       => config('request-log.log_file', storage_path('logs/requests.log')),
 			'level'      => 'debug',
-			'days'       => 1,
+			'days'       => 7,
 			'permission' => 0666,
 			'tap'        => config('request-log.json_mode') ? [LogFormatter::class] : [],
 		], $config);
